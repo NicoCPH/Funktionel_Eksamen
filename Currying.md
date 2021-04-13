@@ -1,4 +1,4 @@
-**1  Duality of programming** 
+## **Currying**
 
  
 
