@@ -18,12 +18,42 @@ There is two ways to handle polymorphism one is parametric which is when the typ
 
 **• How to handle errors using custom types** 
 
-Using Maybe and Nothing
+Using Maybe 
 Or you use Case of
 
- 
 
- 
+
+Maybe in haskell
+
+ `data Status a =` 
+
+  `Failure`
+
+  `| Success a`
+
+ And case of
+
+`update : Msg -> Model -> (Model, Cmd Msg)`
+
+​	`update msg model =`
+
+  	`case msg of`
+
+​    `GotEmployees result ->`
+
+​      `case result of`
+
+​        `Ok value ->`
+
+​          `(Success value , Cmd.none)`
+
+``````        
+
+``````
+
+​        `Err _ ->`
+
+​          `(Failure, Cmd.none)`
 
  
 
